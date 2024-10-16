@@ -24,7 +24,7 @@ const products: Product[] = Array.from({ length: 30 }, (_, index) => ({
   id: index + 1,
   name: `상품${index + 1}`,
   price: `${(index + 1) * 10},000원`,
-  imageUrl: "/images/car.jpg",
+  imageUrl: "/images/freeimg.jpg",
 }));
 
 export function MainCarousel() {
@@ -37,13 +37,11 @@ export function MainCarousel() {
               <Card>
                 <CardContent className="flex  flex-col aspect-square items-center  p-6">
                   <div className="relative w-full h-full">
-                    {" "}
-                    {/* Set a fixed height */}
                     <Image
                       src={product.imageUrl}
                       alt={product.name}
-                      fill // Make the image fill the parent container
-                      objectFit="cover" // Maintain the aspect ratio and cover the container
+                      fill
+                      objectFit="cover"
                       className="rounded-md"
                     />
                   </div>
